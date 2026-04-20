@@ -1,5 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
-import "../styles/WhatsappFloat.scss";
+import "../styles/WhatsAppFloat.scss";
 
 const WhatsappFloat = () => {
     const phone = "2349063508366";
