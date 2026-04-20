@@ -16,11 +16,61 @@ const RegisterationForm = () => {
         }));
     };
 
-    const next = () => setStep((s) => s + 1);
-    const back = () => setStep((s) => s - 1);
+    const v = (name) => formData[name] || "";
+
+    // ✅ STEP VALIDATION
+    const validateStep = () => {
+        if (step === 0) {
+            if (!v("email") || !v("business-name") || !v("personal-name")) {
+                return "Please fill all personal information fields.";
+            }
+        }
+
+        if (step === 1) {
+            if (!v("working-whatsapp") || !v("working-number")) {
+                return "Please provide your contact details.";
+            }
+        }
+
+        if (step === 2) {
+            if (!v("category") || !v("sale-item")) {
+                return "Please complete your business details.";
+            }
+        }
+
+        if (step === 3) {
+            if (!v("campus") || !v("campus-list")) {
+                return "Please complete final questions.";
+            }
+        }
+
+        return "";
+    };
+
+    const next = () => {
+        const err = validateStep();
+        if (err) {
+            setError(err);
+            return;
+        }
+        setError("");
+        setStep((s) => s + 1);
+    };
+
+    const back = () => {
+        setError("");
+        setStep((s) => s - 1);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const err = validateStep();
+        if (err) {
+            setError(err);
+            return;
+        }
+
         setSubmitting(true);
         setError("");
 
@@ -38,24 +88,25 @@ const RegisterationForm = () => {
 
             const data = await res.json();
 
-            if (res.ok && data.success) {
-                const message = `Hello my name is ${formData["personal-name"]}, my brand is ${formData["business-name"]} and I want to pay for ${formData["campus"]} campuses, which are ${formData["campus-list"]}`;
-                const whatsappURL = `https://wa.me/message/WYBLOU6MJNFOC1?text=${encodeURIComponent(message)}`;
-                window.location.href = whatsappURL;
-            } else {
-                setError(data.message || "Submission failed. Please try again.");
+            if (!res.ok || !data.success) {
+                throw new Error(data.message || "Submission failed");
             }
+
+            // ✅ WhatsApp redirect
+            const message = `Hello my name is ${v("personal-name")}, my brand is ${v("business-name")} and I want to pay for ${v("campus")} campuses, which are ${v("campus-list")}`;
+            const url = `https://wa.me/234XXXXXXXXXX?text=${encodeURIComponent(message)}`;
+
+            window.location.href = url;
+
         } catch (err) {
-            setError("Network error. Please check your connection and try again.");
+            setError(err.message || "Something went wrong. Try again.");
         } finally {
             setSubmitting(false);
         }
     };
 
-    const v = (name) => formData[name] || "";
-
     return (
-        <form className="reg-form" onSubmit={handleSubmit}>
+        <form className="reg-form" onSubmit={handleSubmit} noValidate>
             {/* STEP INDICATOR */}
             <div className="steps">
                 {steps.map((s, i) => (
@@ -74,9 +125,7 @@ const RegisterationForm = () => {
                     <input name="business-name" placeholder="Business Name" value={v("business-name")} onChange={handleChange} />
                     <input name="personal-name" placeholder="Personal Name" value={v("personal-name")} onChange={handleChange} />
 
-                    <small>
-                        Please state your business name as it should appear on your stand.
-                    </small>
+                    <small>Please state your business name as it should appear on your stand.</small>
                 </div>
             )}
 
@@ -87,13 +136,12 @@ const RegisterationForm = () => {
 
                     <input name="working-whatsapp" placeholder="Business WhatsApp" value={v("working-whatsapp")} onChange={handleChange} />
                     <input name="working-number" placeholder="Working Number" value={v("working-number")} onChange={handleChange} />
+
                     <input name="instagram" placeholder="Instagram" value={v("instagram")} onChange={handleChange} />
                     <input name="facebook" placeholder="Facebook" value={v("facebook")} onChange={handleChange} />
                     <input name="tiktok" placeholder="TikTok" value={v("tiktok")} onChange={handleChange} />
 
-                    <small>
-                        Ensure business name and social handles are correct. These will be used for promotion and group updates.
-                    </small>
+                    <small>Ensure details are correct. Used for promotion & updates.</small>
                 </div>
             )}
 
@@ -103,36 +151,29 @@ const RegisterationForm = () => {
                     <h2>Product / Service Information</h2>
 
                     <select name="worth" value={v("worth")} onChange={handleChange}>
-                        <option value="">Approximate worth of goods</option>
-                        <option>Below ₦500,000</option>
-                        <option>₦500,000 - ₦1,000,000</option>
-                        <option>₦1,000,000+</option>
-                        <option>₦2,000,000+</option>
-                        <option>₦5,000,000+</option>
-                        <option>₦10,000,000+</option>
+                        <option value="">Worth of goods</option>
+                        <option value="below_500k">Below ₦500,000</option>
+                        <option value="500k_1m">₦500k - ₦1M</option>
+                        <option value="1m_2m">₦1M - ₦2M</option>
+                        <option value="2m_plus">₦2M+</option>
                     </select>
 
+                    {/* ✅ FIXED CATEGORY VALUES */}
                     <select name="category" value={v("category")} onChange={handleChange}>
                         <option value="">Select Category</option>
-                        <option value="">Thrifts</option>
-                        <option value="">Brandnew clothes</option>
-
-                        <option value="">Food & Beverages</option>
-                        <option value="">Beauty & Cosmetics</option>
-                        <option value="">Electronics & Gadgets</option>
-                        <option value="">Home & Decor</option>
-                        <option value="">Health & Wellness</option>
-                        <option value="">Education & Stationery</option>
-                        <option value="">Services</option>
-                        <option value="">Other</option>
+                        <option value="thrifts">Thrifts</option>
+                        <option value="clothing">Brand New Clothes</option>
+                        <option value="food">Food & Beverages</option>
+                        <option value="beauty">Beauty & Cosmetics</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="services">Services</option>
+                        <option value="other">Other</option>
                     </select>
 
                     <input name="state" placeholder="State" value={v("state")} onChange={handleChange} />
                     <input name="sale-item" placeholder="What exactly will you be selling?" value={v("sale-item")} onChange={handleChange} />
 
-                    <small>
-                        Be specific with your niche and ensure items match your selected category.
-                    </small>
+                    <small>Ensure items match your category.</small>
                 </div>
             )}
 
@@ -146,26 +187,23 @@ const RegisterationForm = () => {
 
                     <select name="survey" value={v("survey")} onChange={handleChange}>
                         <option value="">How did you hear about us?</option>
-                        <option>Referred by a vendor</option>
-                        <option>TikTok</option>
-                        <option>Instagram</option>
-                        <option>Facebook</option>
-                        <option>Billboard</option>
-                        <option>Student</option>
+                        <option value="referral">Referred</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="student">Student</option>
                     </select>
 
-                    <small>
-                        By clicking submit you are agreeing to the terms and conditions.
-                    </small>
+                    <small>Only 60 vendors per campus will be selected.</small>
 
                     {error && <p className="form-error">{error}</p>}
                 </div>
             )}
 
-            {/* NAVIGATION */}
+            {/* NAV */}
             <div className="form-nav">
                 {step > 0 && (
-                    <button type="button" onClick={back} disabled={submitting}>
+                    <button type="button" onClick={back}>
                         Back
                     </button>
                 )}
