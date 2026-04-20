@@ -136,6 +136,7 @@ const RegisterationForm = () => {
 
                     <input name="working-whatsapp" placeholder="Business WhatsApp" value={v("working-whatsapp")} onChange={handleChange} />
                     <input name="working-number" placeholder="Working Number" value={v("working-number")} onChange={handleChange} />
+                    <input name="state" placeholder="State of Residence" value={v("state")} onChange={handleChange} />
 
                     <input name="instagram" placeholder="Instagram" value={v("instagram")} onChange={handleChange} />
                     <input name="facebook" placeholder="Facebook" value={v("facebook")} onChange={handleChange} />
@@ -170,7 +171,6 @@ const RegisterationForm = () => {
                         <option value="other">Other</option>
                     </select>
 
-                    <input name="state" placeholder="State" value={v("state")} onChange={handleChange} />
                     <input name="sale-item" placeholder="What exactly will you be selling?" value={v("sale-item")} onChange={handleChange} />
 
                     <small>Ensure items match your category.</small>
