@@ -1,0 +1,64 @@
+.payment-plan {
+    background: #000;
+    color: #fff;
+
+    padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4%, 2.5rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* TITLE */
+.payment-plan h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    text-align: center;
+}
+
+/* GRID */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+
+    width: 100%;
+    max-width: 800px;
+}
+
+/* CARD */
+.payment-card {
+    background: var(--silo-blue-glass);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid var(--silo-blue-glass-border);
+    border-radius: 16px;
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    transition: all 0.3s ease;
+}
+
+.payment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 255, 0.2);
+}
+
+/* PLAN NAME */
+.payment-card h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* PRICE */
+.payment-card p {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--silo-blue-primary);
+}

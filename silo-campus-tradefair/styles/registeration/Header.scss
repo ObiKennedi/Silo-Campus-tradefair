@@ -1,0 +1,114 @@
+.register-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.8rem clamp(1rem, 4vw, 2rem);
+
+    background: var(--silo-blue-glass);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--silo-blue-glass-border);
+
+    /* BACK ICON */
+    a {
+        color: var(--silo-white);
+        display: flex;
+
+        svg {
+            width: 28px;
+            height: 28px;
+            transition: 0.3s;
+        }
+
+        &:hover svg {
+            transform: translateX(-5px);
+            color: var(--silo-blue-primary);
+        }
+    }
+
+    /* MENU BUTTON */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* NAV */
+    nav {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+
+            li a {
+                color: white;
+                text-decoration: none;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background: var(--silo-blue-primary);
+                    transition: 0.3s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* LOGO */
+    img {
+        width: 40px;
+    }
+
+    /* ========================= */
+    /* 📱 MOBILE */
+    /* ========================= */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        nav {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+
+            background: var(--silo-blue-primary);
+            backdrop-filter: blur(12px);
+
+            transform: translateY(-200%);
+            opacity: 0;
+            transition: 0.3s;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem 0;
+            }
+        }
+
+        &.open nav {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

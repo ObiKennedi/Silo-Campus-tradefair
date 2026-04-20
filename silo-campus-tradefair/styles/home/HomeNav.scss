@@ -1,0 +1,104 @@
+.home-header {
+    padding: 10px 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background: transparent;
+
+    .logo {
+        width: 150px;
+        height: 50px;
+    }
+
+    /* 🔹 Desktop Nav */
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: var(--silo-white);
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: var(--silo-blue-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    /* 🔹 Mobile Button */
+    .mobile-nav {
+        display: none;
+
+        button {
+            background: none;
+            border: none;
+            color: var(--silo-white);
+            cursor: pointer;
+        }
+    }
+
+    /* 🔹 Glass on scroll */
+    &.scrolled {
+        background-color: var(--silo-blue-glass);
+        backdrop-filter: blur(10px);
+        border-bottom: var(--silo-border-width) solid var(--silo-blue-glass-border);
+    }
+
+    /* ========================= */
+    /* 📱 MOBILE STYLES */
+    /* ========================= */
+
+    @media (max-width: 768px) {
+        padding: 10px 1.5rem;
+
+        .mobile-nav {
+            display: block;
+        }
+
+        nav {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+
+            background: var(--silo-blue-glass);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--silo-blue-glass-border);
+
+            transform: translateY(-200%);
+            opacity: 0;
+            transition: all 0.7s ease;
+
+            ul {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        /* 🔥 When menu is open */
+        &.open {
+            nav {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}

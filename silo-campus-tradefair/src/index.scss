@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --silo-blue-primary: #0000FF;
+  --silo-blue-dark: #00008B;
+
+  --silo-blue-glass: rgba(0, 0, 255, 0.15);
+  --silo-blue-glass-strong: rgba(0, 0, 255, 0.25);
+  --silo-blue-glass-border: rgba(255, 255, 255, 0.2);
+
+  --silo-red-accent: #FF0000;
+  --silo-purple-accent: #800080;
+  --silo-white: #FFFFFF;
+  --silo-gray-light: #D3D3D3;
+  --silo-gray-dark: #333333;
+
+  --silo-font-primary: 'Arial Black', sans-serif;
+  --silo-font-script: 'Cursive', sans-serif;
+
+  --silo-border-width: 2px;
+  --silo-border-radius: 50%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-page {
+  background-color: #0d0d0d;
+}

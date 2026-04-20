@@ -1,0 +1,73 @@
+.campus-card {
+    background: var(--silo-blue-glass);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid var(--silo-blue-glass-border);
+    border-radius: 16px;
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+
+    color: var(--silo-white);
+
+    transition: all 0.3s ease;
+
+    /* hover effect */
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(0, 0, 255, 0.2);
+    }
+
+    /* TITLE */
+    &-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    /* INFO ROWS */
+    p {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        font-size: 0.95rem;
+        color: #ddd;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            color: var(--silo-blue-primary);
+            flex-shrink: 0;
+        }
+    }
+
+    /* subtle divider */
+    p:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 0.5rem;
+    }
+
+    /* ========================= */
+    /* 📱 MOBILE */
+    /* ========================= */
+    @media (max-width: 480px) {
+        padding: 1.2rem;
+
+        &-title {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}

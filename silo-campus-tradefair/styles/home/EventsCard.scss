@@ -1,0 +1,112 @@
+@use "sass:color";
+
+// Sass variables (mirror your CSS variables for manipulation)
+$silo-blue: #0000FF;
+
+.event-card {
+    // Glassmorphism Core
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 400px;
+    color: var(--silo-white);
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        opacity: 0.9;
+        animation: breathing 5s ease-in-out infinite;
+    }
+
+    &__content {
+        padding: 1.5rem;
+    }
+
+    &__title {
+        font-family: var(--silo-font-primary);
+        color: var(--silo-white);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.8rem 1.5rem;
+
+        background-color: var(--silo-blue-primary);
+        color: var(--silo-white);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        font-family: var(--silo-font-primary);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            // Modern Sass replacement (same visual result)
+            background-color: color.adjust($silo-blue, $lightness: 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 255, 0.3);
+            border-bottom: 3px solid var(--silo-red-accent);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+.campus-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0.75rem;
+
+    &__name {
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--silo-white);
+    }
+
+    &__details {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+
+        .date {
+            font-weight: 600;
+            color: var(--silo-white);
+        }
+
+        .separator {
+            margin: 0 5px;
+            color: var(--silo-red-accent);
+        }
+    }
+}
+
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

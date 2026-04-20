@@ -1,0 +1,21 @@
+.past-events {
+    background: var(--silo-gray-dark);
+    border: 2px solid var(--silo-blue-glass-border);
+    color: var(--silo-gray-light);
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4%, 2.5rem);
+    min-height: 100vh;
+    font-family: 'DM Mono', monospace;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+
+    .past-events-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+}
