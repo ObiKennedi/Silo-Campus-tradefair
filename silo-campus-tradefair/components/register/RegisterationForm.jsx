@@ -94,7 +94,7 @@ const RegisterationForm = () => {
 
             // ✅ WhatsApp redirect
             const message = `Hello my name is ${v("personal-name")}, my brand is ${v("business-name")} and I want to pay for ${v("campus")} campuses, which are ${v("campus-list")}`;
-            const url = `https://wa.me/234XXXXXXXXXX?text=${encodeURIComponent(message)}`;
+            const url = `https://wa.me/2349063508366?text=${encodeURIComponent(message)}`;
 
             window.location.href = url;
 
@@ -164,9 +164,27 @@ const RegisterationForm = () => {
                         <option value="">Select Category</option>
                         <option value="thrifts">Thrifts</option>
                         <option value="clothing">Brand New Clothes</option>
-                        <option value="food">Food & Beverages</option>
-                        <option value="beauty">Beauty & Cosmetics</option>
-                        <option value="electronics">Electronics</option>
+                        <option value="footwear">Footwear</option>
+                        <option value="bags">Bags</option>
+                        <option value="perfume/fragrance">Perfume/Fragrance</option>
+                        <option value="nightwear/lingerie/underwear">Nightwear/Lingerie/Underwear</option>
+                        <option value="adult-toys/accessories">Adult product and Accessories</option>
+                        <option value="make-up-products">Make Up products and Accessories</option>
+                        <option value="skincare/bodycare">Skincare/Bodycare products</option>
+                        <option value="jewelry">Jewel/Fashion Accessories</option>
+                        <option value="phone/accessories">Phone and Accessories</option>
+                        <option value="stationaries">Stationaries and Educational materials</option>
+                        <option value="fabrics">Fabrics</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="drinks&liquor">Drinks and Liquor</option>
+                        <option value="grills">Grills</option>
+                        <option value="fanfair-merchandise">Anime/KPOP/Manga/KDrama Merchandise</option>
+                        <option value="female-ready-to-wear">Female Ready to wear</option>
+                        <option value="male-ready-to-wear">Male ready to wear</option>
+                        <option value="body-shapers">Body Shapers</option>
+                        <option value="kiddies-fashion">Kiddies Fashion</option>
+                        <option value="electronics">Electronics/Home Appliances</option>
+                        <option value="cooked-food">Cooked Food</option>
                         <option value="services">Services</option>
                         <option value="other">Other</option>
                     </select>

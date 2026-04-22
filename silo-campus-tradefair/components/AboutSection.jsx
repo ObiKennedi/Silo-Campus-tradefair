@@ -20,10 +20,9 @@ const AboutSection = ({ showButton = true }) => {
                         <h2 className="about-section__title">About Us</h2>
                         <div>
                             <h4>Bridging the gap between students and the market, one tradefair at a time.</h4>
-                            <p>Silo campus trade is a movement across tertiary institutions in Nigeria, aimed at bridging the gap between students and the market. We host tradefairs that bring together students, entrepreneurs, and industry leaders to showcase their products and services, network, and share knowledge.
-                            </p>
-                            <p>Our tradefairs are designed to provide a platform for small and medium scale entrepreneurs to showcase their products and services to thousands of students, visitors and potential customers.</p>
-                            <p>We also give students an opportunity to purchase products and services at affordable prices, network with entrepreneurs and industry leaders, and share knowledge and ideas.</p>
+                            <p>We are a physical marketplace event hosted across university campuses, where vendors (especially small and medium-scale entrepreneurs) come to sell directly to students. We have successfully hosted over 7 different tradefair’s across major campuses in Nigeria 🇳🇬 such as : university of Porthacourt , Institute of management and technology and imo state university</p>
+                            <p>We have helped over 300 businesses multiply their sales and increased their customer base.</p>
+                            <p>Silo campus tradefair isn’t just a tradefair brand —it’s the Africa’s premier campus tradefair</p>
                         </div>
                     </div>
                     {showButton && (
