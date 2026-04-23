@@ -2,7 +2,7 @@ import "../../styles/registeration/TermsAndConditions.scss";
 
 const TermsAndConditions = () => {
     return (
-        <section className="terms-and-conditions">
+        <section className="terms-and-conditions" id="terms">
             <h1>Terms and Conditions</h1>
 
             <p>

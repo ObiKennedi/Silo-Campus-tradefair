@@ -227,7 +227,7 @@ const RegisterationForm = () => {
                             required
                         />
                         <label htmlFor="agree-to-terms">
-                            I agree to the <span>terms and conditions</span>
+                            I agree to the <Link to="#terms">terms and conditions</Link>
                         </label>
                     </div>
 
