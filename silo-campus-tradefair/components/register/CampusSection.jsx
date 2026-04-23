@@ -3,7 +3,7 @@ import "../../styles/registeration/CampusSection.scss"
 
 const ImoCardProps = [
     {
-        campus: "Federal University of Technology Owerri",
+        campus: "Federal University of Technology",
         date: "2nd - 5th June, 2026",
         time: "9:00 AM Daily",
         venue: "Old seet head Futo roundabout"

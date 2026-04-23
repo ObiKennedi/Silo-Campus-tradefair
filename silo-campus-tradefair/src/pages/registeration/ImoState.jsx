@@ -1,5 +1,5 @@
 import { ImoCampusSection } from "../../../components/register/CampusSection";
-import PaymentPlan from "../../../components/register/PaymentPlan";
+import { ImoPaymentPlan } from "../../../components/register/PaymentPlan";
 import RegisterationForm from "../../../components/register/RegisterationForm";
 
 export default function ImoState() {
@@ -7,7 +7,7 @@ export default function ImoState() {
         <div className="out-let">
             <h1>Imo State Campus' Tradefair</h1>
             <ImoCampusSection />
-            <PaymentPlan />
+            <ImoPaymentPlan />
             <RegisterationForm />
         </div>
     );

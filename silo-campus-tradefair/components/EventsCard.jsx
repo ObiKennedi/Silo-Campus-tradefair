@@ -38,7 +38,7 @@ const EventsCard = ({ image, title, campuses, route }) => {
                     className="event-card__button"
                     onClick={() => navigate(route)}
                 >
-                    See More
+                    Apply to Exhibit
                 </button>
             </div>
         </div>
