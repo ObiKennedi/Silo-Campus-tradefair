@@ -27,13 +27,13 @@ const PhCampusProps = [
         campus: "Captain Elechi Amadi Polytechnic",
         date: "July 15th - 17th, 2026",
         time: "9:00 AM Daily",
-        venue: "Rumuola, Portharcourt, Rivers State"
+        venue: "Volleyball field, at the school gate"
     },
     {
         campus: "University of Portharcourt",
         date: "July 29th - 30th, 2026",
         time: "9:00 AM Daily",
-        venue: "Choba, Portharcourt, Rivers State"
+        venue: "Open field, opposite old convocation arena"
     },
 ]
 
