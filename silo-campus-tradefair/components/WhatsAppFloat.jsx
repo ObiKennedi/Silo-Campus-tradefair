@@ -4,7 +4,8 @@ import "../styles/WhatsAppFloat.scss";
 const WhatsappFloat = () => {
     const phone = "2349063508366";
 
-    const message = "Hello, I’d like to make an enquiry about Silo Campus Tradefair.";
+    const message =
+        "Hello, I’d like to make an enquiry about Silo Campus Tradefair.";
 
     const link = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
@@ -15,6 +16,7 @@ const WhatsappFloat = () => {
             target="_blank"
             rel="noopener noreferrer"
         >
+            <span className="whatsapp-text">Chat with us</span>
             <FaWhatsapp />
         </a>
     );

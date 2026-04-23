@@ -4,8 +4,11 @@ const reviewVideos = [
     "9Gha9Q9EZrk",
     "tFQdG2EPAjM",
     "WEPhb_dG5zo",
-    "dQw4w9WgXcQ",
-    "9Gha9Q9EZrk",
+
+    // ✅ New ones (from your links)
+    "2mrKfoQ5OIo",
+    "81nUUljQ-9U",
+    "Kaapsh7BT-c",
 ];
 
 const ReviewVideo = () => {
@@ -18,7 +21,7 @@ const ReviewVideo = () => {
                     <div key={index} className="video-card">
                         <iframe
                             src={`https://www.youtube.com/embed/${id}`}
-                            title="YouTube video"
+                            title={`Review video ${index + 1}`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />

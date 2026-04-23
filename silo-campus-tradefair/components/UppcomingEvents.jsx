@@ -42,25 +42,20 @@ const UppcomingEvents = () => {
                     route="/register/portharcourt"
                     campuses={[
                         {
+                            name: "Captain Elechi Amadi Polytechnic",
+                            date: "July 15th - 17th, 2026",
+                            address: "Rumuola, Portharcourt, Rivers State"
+                        },
+                        {
                             name: "University of Portharcourt",
-                            date: "July, 2026",
+                            date: "July 29th - 30th, 2026",
                             address: "Choba, Portharcourt, Rivers State"
                         },
-                        {
-                            name: "Ignatius Ajuru University of Education",
-                            date: "July, 2026",
-                            address: "Rumuolumeni, Portharcourt, Rivers State"
-                        },
-                        {
-                            name: "Captain Elechi Amadi Polytechnic",
-                            date: "July, 2026",
-                            address: "Rumuola, Portharcourt, Rivers State"
-                        }
                     ]}
                 />
                 <EventsCard
                     image="/event1.jpg"
-                    title="Lagos' Campus Tradefair"
+                    title="Lagos State Campus' Tradefair"
                     route="/register/lagos"
                     campuses={[
                         {

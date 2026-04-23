@@ -12,11 +12,11 @@ export default function Registeration() {
     return (
         <div className="registeration">
             <Header />
+            <Outlet />
             <Expectactions />
             <TermsAndConditions />
             <VendorNote />
             <WhatsappFloat />
-            <Outlet />
             <Footer />
         </div>
     );

@@ -157,6 +157,7 @@ const RegisterationForm = () => {
                         <option value="500k_1m">₦500k - ₦1M</option>
                         <option value="1m_2m">₦1M - ₦2M</option>
                         <option value="2m_plus">₦2M+</option>
+                        <option value="5m_plus">₦5M+</option>
                     </select>
 
                     {/* ✅ FIXED CATEGORY VALUES */}
@@ -200,7 +201,12 @@ const RegisterationForm = () => {
                 <div className="form-step">
                     <h2>Final Questions</h2>
 
-                    <input name="campus" placeholder="Number of campuses" value={v("campus")} onChange={handleChange} />
+                    <select name="campus" value={v("campus")} onChange={handleChange}>
+                        <option value="">Select Number of Campuses</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                     <input name="campus-list" placeholder="List campuses" value={v("campus-list")} onChange={handleChange} />
 
                     <select name="survey" value={v("survey")} onChange={handleChange}>
@@ -211,8 +217,21 @@ const RegisterationForm = () => {
                         <option value="facebook">Facebook</option>
                         <option value="student">Student</option>
                     </select>
+                    <div className="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="agree-to-terms"
+                            name="agree-to-terms"
+                            value="yes"
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="agree-to-terms">
+                            I agree to the <span>terms and conditions</span>
+                        </label>
+                    </div>
 
-                    <small>Only 60 vendors per campus will be selected.</small>
+                    <small>Only 60 vendors per campus will be selected and less than 5 in each category. Payment secures slot.</small>
 
                     {error && <p className="form-error">{error}</p>}
                 </div>

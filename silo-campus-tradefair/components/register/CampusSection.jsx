@@ -16,7 +16,7 @@ const ImoCardProps = [
     },
     {
         campus: "Imo state University (IMSU)",
-        date: "3rd - 5th June, 2026",
+        date: "24th - 26th June, 2026",
         time: "9:00 AM Daily",
         venue: "New NDDC field beside IMSU mast",
     }
@@ -24,41 +24,35 @@ const ImoCardProps = [
 
 const PhCampusProps = [
     {
+        campus: "Captain Elechi Amadi Polytechnic",
+        date: "July 15th - 17th, 2026",
+        time: "9:00 AM Daily",
+        venue: "Rumuola, Portharcourt, Rivers State"
+    },
+    {
         campus: "University of Portharcourt",
-        date: "July 8th - 10th, 2026",
+        date: "July 29th - 30th, 2026",
         time: "9:00 AM Daily",
         venue: "Choba, Portharcourt, Rivers State"
     },
-    {
-        campus: "Ignatius Ajuru University of Education",
-        date: "July 14th - 16th, 2026",
-        time: "9:00 AM Daily",
-        venue: "Rumuolumeni, Portharcourt, Rivers State"
-    },
-    {
-        campus: "Captain Elechi Amadi Polytechnic",
-        date: "July 21st - 23rd, 2026",
-        time: "9:00 AM Daily",
-        venue: "Rumuola, Portharcourt, Rivers State"
-    }
 ]
 
 const LagosCampusProps = [
     {
         campus: "University of Lagos",
-        date: "August 11th - 13th, 2026",
+        date: "August, 2026",
         time: "9:00 AM Daily",
         venue: "Akoka, Yaba, Lagos State"
     },
     {
         campus: "Lagos State University",
-        date: "August 18th - 20th, 2026",
+        date: "August, 2026",
         time: "9:00 AM Daily",
         venue: "Ojo, Lagos State"
     },
     {
         campus: "Yaba College of Technology",
-        date: "August 25th - 27th, 2026",
+        date: "August, 2026",
         time: "9:00 AM Daily",
         venue: "Yaba, Lagos State"
     }
