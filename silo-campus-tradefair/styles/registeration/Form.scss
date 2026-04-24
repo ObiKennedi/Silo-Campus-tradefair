@@ -123,6 +123,7 @@
         font-size: 12px;
         color: #fff;
         font-weight: bold;
+        z-index: -1;
     }
 
     label {
@@ -135,6 +136,7 @@
             color: var(--silo-blue-primary);
             text-decoration: underline;
             cursor: pointer;
+            z-index: 10;
         }
     }
 }
