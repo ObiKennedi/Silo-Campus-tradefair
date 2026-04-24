@@ -105,6 +105,7 @@
 
         position: relative;
         transition: all 0.2s ease;
+        z-index: 1;
     }
 
     /* checked state */
@@ -123,7 +124,7 @@
         font-size: 12px;
         color: #fff;
         font-weight: bold;
-        z-index: -1;
+        z-index: 0;
     }
 
     label {
