@@ -3,12 +3,9 @@ import "../styles/home/ReviewVideos.scss";
 const reviewVideos = [
     "9Gha9Q9EZrk",
     "tFQdG2EPAjM",
-    "WEPhb_dG5zo",
-
-    // ✅ New ones (from your links)
-    "2mrKfoQ5OIo",
     "81nUUljQ-9U",
-    "fc549C1qrLA"
+    "fc549C1qrLA",
+    "mkbsHLrHjC0",
 ];
 
 const ReviewVideo = () => {
