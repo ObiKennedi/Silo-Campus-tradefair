@@ -13,12 +13,10 @@ const HeroSection = () => {
     const navigate = useNavigate()
     return (
         <section className="hero-section" data-aos="fade-up">
-            <video
+            <img
                 className="hero-video"
-                src="/video.mp4"
-                autoPlay
-                loop
-                muted
+                src="/background.jpg"
+                alt="background"
             />
 
             <div className="hero-content">
