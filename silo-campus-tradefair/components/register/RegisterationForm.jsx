@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../styles/registeration/Form.scss";
+import { Link } from "react-router-dom";
 
 const RegisterationForm = () => {
     const [step, setStep] = useState(0);
