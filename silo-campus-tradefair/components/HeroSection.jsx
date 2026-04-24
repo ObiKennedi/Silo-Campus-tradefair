@@ -15,7 +15,7 @@ const HeroSection = () => {
         <section className="hero-section" data-aos="fade-up">
             <img
                 className="hero-video"
-                src="/background.jpg"
+                src="/Background.jpg"
                 alt="background"
             />
 
