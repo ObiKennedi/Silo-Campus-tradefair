@@ -15,7 +15,7 @@ const UppcomingEvents = () => {
             <h1 className="upcoming-events__title">UPCOMING TRADEFAIR</h1>
             <div className="events-container">
                 <EventsCard
-                    image="/event1.jpg"
+                    image="/event1.png"
                     title="Imo State Campus' Tradefair"
                     route="/register/imo-state"
                     campuses={[
