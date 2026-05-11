@@ -20,11 +20,6 @@ const UppcomingEvents = () => {
                     route="/register/imo-state"
                     campuses={[
                         {
-                            name: "Federal University of Technology",
-                            date: "June 2nd - 4th, 2026",
-                            address: "Owerri, Imo State"
-                        },
-                        {
                             name: "Federal Polytechnic Nekede",
                             date: "June 9th - 11th, 2026",
                             address: "Nekede, Imo State"
@@ -34,10 +29,15 @@ const UppcomingEvents = () => {
                             date: "June 23rd - 24th, 2026",
                             address: "123 University Rd, Owerri, Imo State"
                         },
+                        {
+                            name: "Federal University of Technology",
+                            date: "July 1st - 3rd, 2026",
+                            address: "Owerri, Imo State"
+                        },
                     ]}
                 />
                 <EventsCard
-                    image="/event1.jpg"
+                    image="/event2.jpg"
                     title="Portharcourt Campus' Tradefair"
                     route="/register/portharcourt"
                     campuses={[
@@ -54,7 +54,7 @@ const UppcomingEvents = () => {
                     ]}
                 />
                 <EventsCard
-                    image="/event1.jpg"
+                    image="/event3.jpg"
                     title="Lagos State Campus' Tradefair"
                     route="/register/lagos"
                     campuses={[

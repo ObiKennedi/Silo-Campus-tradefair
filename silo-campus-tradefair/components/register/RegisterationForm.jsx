@@ -186,6 +186,7 @@ const RegisterationForm = () => {
                         <option value="body-shapers">Body Shapers</option>
                         <option value="kiddies-fashion">Kiddies Fashion</option>
                         <option value="electronics">Electronics/Home Appliances</option>
+                        <option value="hair-extensions">Hairs and hair accessories</option>
                         <option value="cooked-food">Cooked Food</option>
                         <option value="services">Services</option>
                         <option value="other">Other</option>
