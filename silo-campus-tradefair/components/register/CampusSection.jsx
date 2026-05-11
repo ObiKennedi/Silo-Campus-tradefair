@@ -3,12 +3,6 @@ import "../../styles/registeration/CampusSection.scss"
 
 const ImoCardProps = [
     {
-        campus: "Federal University of Technology",
-        date: "2nd - 4th June, 2026",
-        time: "9:00 AM Daily",
-        venue: "Old seet head Futo roundabout"
-    },
-    {
         campus: "Federal Polytechnic, Nekede",
         date: "9th - 11th June, 2026",
         time: "9:00 AM Daily",
@@ -19,6 +13,12 @@ const ImoCardProps = [
         date: "24th - 26th June, 2026",
         time: "9:00 AM Daily",
         venue: "New NDDC field beside IMSU mast",
+    },
+    {
+        campus: "Federal University of Technology",
+        date: "1st - 3rd July, 2026",
+        time: "9:00 AM Daily",
+        venue: "Old seet head Futo roundabout"
     }
 ]
 
