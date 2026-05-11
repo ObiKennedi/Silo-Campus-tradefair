@@ -30,8 +30,9 @@ const ContactForm = () => {
                     </p>
                 </div>
                 <div className="whatsapp-community">
+                    <h3>Join our whatsapp community</h3>
                     <a target="blank" href="https://chat.whatsapp.com/CCgX5UgAEKJLQqYpuLR8BX?mode=gi_t">
-                        <FaWhatsapp /> Join Community
+                        <FaWhatsapp />
                     </a>
                 </div>
             </div>
