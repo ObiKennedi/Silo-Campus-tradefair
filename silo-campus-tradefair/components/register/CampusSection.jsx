@@ -19,6 +19,12 @@ const ImoCardProps = [
         date: "1st - 3rd July, 2026",
         time: "9:00 AM Daily",
         venue: "Old seet head Futo roundabout"
+    },
+    {
+        campus: "Alvan Ikoku University of Education",
+        date: "9th - 11th July, 2026",
+        time: "9:00 AM Daily",
+        venue: "Owerri, Imo State"
     }
 ]
 

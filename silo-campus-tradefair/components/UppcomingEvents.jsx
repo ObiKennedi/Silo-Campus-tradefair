@@ -34,6 +34,11 @@ const UppcomingEvents = () => {
                             date: "July 1st - 3rd, 2026",
                             address: "Owerri, Imo State"
                         },
+                        {
+                            name: "Alvan Ikoku University of Education",
+                            date: "July 9th - 11th, 2026",
+                            address: "Owerri, Imo State"
+                        }
                     ]}
                 />
                 <EventsCard

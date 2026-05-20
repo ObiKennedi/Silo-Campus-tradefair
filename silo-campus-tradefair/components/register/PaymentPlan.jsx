@@ -5,9 +5,8 @@ const ImoPaymentPlan = () => {
         <div className="payment-plan">
             <h1>Payment Plan</h1>
             <div className="payment-grid">
-                <p>Payment for 1 campus: ₦70,000</p>
-                <p>Payment for 2 campuses: ₦130,000</p>
-                <p>Payment for 3 campuses: ₦180,000</p>
+                <p>Payment for 2 campus: ₦100,000</p>
+                <p>Payment for 4 campuses: ₦200,000</p>
             </div>
         </div>
     );
